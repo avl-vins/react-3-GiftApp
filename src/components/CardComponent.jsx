@@ -29,19 +29,18 @@ export const CardComponent = ({categoria}) => {
     <section style={listcCategoria}  >
         
                      <h2 style={listc__titulo} >{categoria}</h2>
-
-                     
-                   <div style={{display:"flex",flexWrap:"wrap", justifyContent:"space-evenly"}} >
                    {
-                        items.map((item)=>(
-                           <ItemComponent key={item.id} {...item} />
-
-                        ))
-                     }
-                        
-                    </div>
+                    isLoading?<h2>...Cargando</h2> : <div style={{display:"flex",flexWrap:"wrap", justifyContent:"space-evenly"}} >
+                    {
+                         items.map((item)=>(
+                            <ItemComponent key={item.id} {...item} />
+ 
+                         ))
+                      }
+                         
+                     </div>
+                   }
                     
-              
          
             </section>
   )

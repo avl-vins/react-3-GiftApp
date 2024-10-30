@@ -15,7 +15,7 @@ const section__titulo = {
 
 export const GiftApp = () => {
   
-   const [categorias,setCategorias] = useState([])
+   const [categorias,setCategorias] = useState(['perdon'])
   
    const getCategoria = (value)=>{
 
