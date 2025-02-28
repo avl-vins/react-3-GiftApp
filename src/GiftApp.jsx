@@ -21,14 +21,18 @@ export const GiftApp = () => {
 
          const exist = categorias.includes(value)
         
-         if(exist){
+         if( exist ){
+          
             alert("Categoria ya existe")  
-      }else{
+          
+          }else{
 
-            setCategorias([...categorias,value])
-      }
+            setCategorias([ ...categorias, value ])
+
+          }
           
    }
+
    
 
    
@@ -36,8 +40,10 @@ export const GiftApp = () => {
   return (
     <section style={section__gift}>
         <h1 style={section__titulo}>GiftApp</h1>
+
         <InputComponent getCategoria={getCategoria} />
-        <ListaComponent categorias={categorias}/>
+        
+        <ListaComponent categorias={categorias} />
 
     </section>
   )

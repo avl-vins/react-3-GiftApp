@@ -20,17 +20,18 @@ const listc__titulo = {
 
 
 
-export const CardComponent = ({categoria}) => {
+export const CardComponent = ({categoria, edit}) => {
 
-   const {items,isLoading} = useGifts(categoria)
+   const {items , isLoading} = useGifts(categoria)
 
+ 
   
   return (
     <section style={listcCategoria}  >
         
                      <h2 style={listc__titulo} >{categoria}</h2>
                    {
-                    isLoading?<h2>...Cargando</h2> : <div style={{display:"flex",flexWrap:"wrap", justifyContent:"space-evenly"}} >
+                    isLoading ?<h2>...Cargando</h2> : <div style={{display:"flex",flexWrap:"wrap", justifyContent:"space-evenly"}} >
                     {
                          items.map((item)=>(
                             <ItemComponent key={item.id} {...item} />
