@@ -8,7 +8,9 @@ export const ListaComponent = ({categorias}) => {
   const [ list , setList ] = useState([])
   
   useEffect(()=>{
+
     setList(categorias)
+
   },[ categorias ])
 
   
@@ -16,7 +18,7 @@ export const ListaComponent = ({categorias}) => {
   return (
     
        <>
-         {
+        {
         list.map( (categoria,i)=>(
 
             <CardComponent categoria={categoria} key={i} />

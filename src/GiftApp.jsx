@@ -7,11 +7,16 @@ const section__gift = {
 
 }
 
-const section__titulo = {
-    fontSize:"2rem",
-    paddingBottom:"2rem"
+const section__title = {
+    fontSize:"3rem",
+    margin:"0"
 }
 
+const section__description = {
+  fontSize:"1rem",
+  margin:"2rem",
+  fontWeight:"300"
+}
 
 export const GiftApp = () => {
   
@@ -27,7 +32,7 @@ export const GiftApp = () => {
           
           }else{
 
-            setCategorias([ ...categorias, value ])
+            setCategorias([...categorias,value])
 
           }
           
@@ -39,7 +44,8 @@ export const GiftApp = () => {
    
   return (
     <section style={section__gift}>
-        <h1 style={section__titulo}>GiftApp</h1>
+        <h1 style={section__title}>GiftApp</h1>
+        <p style={section__description} >GiftApp es una aplicacion que permite buscar gifs por categorias.</p>
 
         <InputComponent getCategoria={getCategoria} />
         
