@@ -15,7 +15,8 @@ const section__title = {
 const section__description = {
   fontSize:"1rem",
   margin:"2rem",
-  fontWeight:"300"
+  fontWeight:"300",
+  textAlign:justify
 }
 
 export const GiftApp = () => {
